@@ -21,7 +21,7 @@ button.addEventListener('click' ,() => {
 
 //توليد الرقم االعشواءي 
 
-targetNumber =Math.floor(Math.rendom() * 100 ) +1 ;
+targetNumber =Math.floor(Math.random() * 100 ) +1 ;
 triesDisplay.innerText = triesLeft ;
 
 //تاثيرات بصرية 
@@ -101,7 +101,7 @@ if (guess === targetNumber) {
 //انهاء اللعبة و اظهار زر العودة
 function endGame() {
     btn.disabled = true ;
-    restartBtn.Btn.classList.remove('hidden') ;
+    restartBtn.classList.remove('hidden') ;
 }
 
 
