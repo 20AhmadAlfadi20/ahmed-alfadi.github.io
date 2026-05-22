@@ -8,14 +8,37 @@ initial-scale= 1.0" >
     <title>Guess Number Game
 </title>
     <link rel="stylesheet"
-href="style_052829.css">
+href="style.css">
 </head>
 
 
 <body>
-    <div class="game-card">
-        <h1>Number Master  🎮</h1>
-        <p>Enter a number between 1 and 100</p>
+<!-- تعديل جبار اضافة صعوبة  -->
+<div id="startCard"class="game-card">
+    <h>Number Master 🎮</h>
+    <p>Select Difficulty to Start: </p>
+
+        <div class="difficulty-menu">
+            <button class="diff-btn"
+            data-tries="9"> Easy (9 Tries) </button>
+            <button class="diff-btn"
+            data-tries="7"> Medium (7 Treis )</button>
+            <button class="diff-btn"
+            data-tries="5"> Hard (5 Tries) </button>
+            <button class="diff-btn expert"
+            data-tries="3"> Expert (3 Tries) 🌚 </button>
+             <button class="diff-btn legend "
+             data-treis="1"> legend (1 Try) 🤣 </button>
+            
+        </div>
+</div>
+
+<div id="gameCard" class="game-card hidden">
+    <h1 id="gameTitle">Nymber Master 🎮
+    </h1>
+    <p> Enter a Number between 1 and 100
+    </p>
+
 
         <input type="number" 
 id="guessInput" placeholder="Type here...">
@@ -25,15 +48,19 @@ id="guessInput" placeholder="Type here...">
         <div id="feedback"
         class="message"></div>
 
-        <div class="stats">Tries: <span
-            id="triesCount">0 
-        </span>
-
+        <div class="stats">
+            Tries left: <span
+            id="triesCount">0  </span>
         </div>
+
+        <button id="restartBtn"
+        class="hidden" style="margin-top : 15xp ;
+        background-color : #ff4444 ; color : 
+        white ;">Play Again 😁</button>"
+        
          </div>
 
-         <script src="script_052834.js">
-         </script>
-
+         <script src="script.js ">
+            </script>
 </body>
 </html>
