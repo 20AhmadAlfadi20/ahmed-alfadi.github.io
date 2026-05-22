@@ -16,7 +16,7 @@ const diffButtons = document.querySelectorAll('.diff-btn') ;
  //تشغيل مستويات الصعوبة 
 diffButtons.forEach(button => {
 button.addEventListener('click' ,() => {
-    maxTries =Number(button.getAttribute('data-tries ')) ;
+    maxTries =Number(button.getAttribute('data-tries')) ;
     triesLeft = maxTries ;
 
 //توليد الرقم االعشواءي 
@@ -78,7 +78,7 @@ if (guess === targetNumber) {
         endGame(); 
         
     } else if (triesLeft === 0) {
-        feedback.innerText = 'GAME OVER!  ( The number was ${targetNumber}) ';
+        feedback.innerText = `GAME OVER!  ( The number was ${targetNumber}) `;
         feedback.style.color = " #ff4444";
         endGame() ;
     } else if (guess > targetNumber) {
